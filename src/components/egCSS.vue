@@ -22,26 +22,23 @@
     </div>
     </div>
     <h2>2、无缝滚动</h2>
-    <p>(1) 父元素width设为max-content，设置overflow x方向scroll，white-space：nowrap.子元素为float：left</p>
+    <p>(1) 父元素width设为max-content，再套一层div设置overflow x方向scroll，子元素为float：left</p>
     <div class="content">
       <div class="wrapper">
       <div class="in-wrapper" v-for="(item) in dates" :key="item.id">
         <time>{{item.day}}</time>
         <p> {{item.time}} </p>
-        <!-- <p>{{item.state}}</p> -->
       </div>
       </div>
     </div>
     <p>
       (2) 父元素width：100%，设置overflow x方向scroll，white-space：nowrap.子元素设固定宽高，设display：inline-block。
     </p>
-    <div class="content">
     <div class="wrapper-1">
       <div class="in-wrapper-1" v-for="(item) in dates" :key="item.id">
         <time>{{item.day}}</time>
         <p> {{item.time}} </p>
       </div>
-    </div>
     </div>
     <h2 id='route'>3、背景图片</h2>
     <p>
@@ -137,9 +134,6 @@ export default {
       document.documentElement.scrollTop = anchor.offsetTop;
     }
   }
-  // mounted(){
-  // this.goAnchor("#route");
-  // }
 };
 </script>
 <style scoped>
@@ -159,15 +153,11 @@ ul {
   background-color: gray;
 }
 .content {
-  overflow: auto;
-  height: 4rem;
+  overflow-x: auto;
+  overflow-y: hidden
 }
 .wrapper {
   width: max-content;
-  /* height: 4rem; */
-  white-space: nowrap;
-  overflow: hidden;
-  overflow-x: scroll;
 }
 .in-wrapper {
   width: 5rem;
@@ -182,7 +172,7 @@ time {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 .in-wrapper-1 {
   display: inline-block;
