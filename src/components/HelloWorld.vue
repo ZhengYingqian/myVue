@@ -13,8 +13,11 @@
         <!--<img v-lazy="imgUrl[1]" />-->
       </li>
       <li>
-        <p>test</p>
+       <a href="./css">跳转到css页面</a>
       </li>
+      <li>
+         <router-link to="/css#route" event="click">test router2</router-link>
+        </li>
     </ul>
   </div>
 </template>
