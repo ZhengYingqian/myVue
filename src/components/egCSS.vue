@@ -277,5 +277,3 @@ time {
 	margin-left: -5px;
 }
 </style>
-<style lang="scss" scoped>
-</style>

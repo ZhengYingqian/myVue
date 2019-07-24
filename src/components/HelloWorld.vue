@@ -18,6 +18,9 @@
       <li>
          <router-link to="/css#route" event="click">test router2</router-link>
         </li>
+        <li>
+          <a href="./juzhong">垂直居中的几种方法</a>
+        </li>
     </ul>
   </div>
 </template>

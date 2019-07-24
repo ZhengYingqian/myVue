@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import egCSS from '@/components/egCSS'
+import juzhong from '@/components/juzhong'
 
 Vue.use(Router)
 
@@ -42,6 +43,10 @@ export default new Router({
       path: '/css',
       name: 'egCSS',
       component: egCSS
+    }, {
+      path: '/juzhong',
+      name: 'juzhong',
+      component: juzhong
     }
   ]
 })
